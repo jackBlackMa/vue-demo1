@@ -1,4 +1,4 @@
-const base = require('./webpackl.base.conf');
+const base = require('./webpack.base.conf');
 const webpackMerge = require('webpack-merge');
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const webpack = require('webpack');

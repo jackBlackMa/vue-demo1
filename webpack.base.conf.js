@@ -9,8 +9,7 @@ const webpack = require('webpack');
 module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'main.js',
-        publicPath: "/dist/",
+        filename: '[name]_[hash:8].js',
     },
     module: {
         rules: [
