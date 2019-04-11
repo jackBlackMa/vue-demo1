@@ -25,7 +25,8 @@ module.exports = webpackMerge(base, {
     devServer: {
         open: true,
         hot: true,
-        port: '10000',
+        // port: '10000',
+         historyApiFallback: true,
     },
     devtool: 'source-map',
 

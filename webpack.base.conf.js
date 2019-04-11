@@ -10,6 +10,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name]_[hash:8].js',
+        chunkFilename:  '[name]_[hash:8]_chunk.js'
     },
     module: {
         rules: [
