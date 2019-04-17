@@ -5,6 +5,8 @@
       <button @click='handleMin'>--</button>
     </div>
     <div>{{count}}</div>
+    <div>{{list}}</div>
+    <div>{{listCount}}</div>
   </div>
 </template>
 
@@ -21,7 +23,13 @@ export default {
   computed: {
     count() {
       return this.$store.state.count;
-    }
+    },
+    list(){
+      return this.$store.getters.filteredList
+    },
+    listCount(){
+      return this.$store.getters.listCount
+    },
   }
 };
 </script>
