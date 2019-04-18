@@ -7,17 +7,19 @@ module.exports = webpackMerge(base, {
     module: {
         rules: [
             {
-                test: /\.scss/,
+                test: /\.scss$/,
                 use: [
                     'style-loader',
                     'css-loader',
                     {
                         loader: "postcss-loader?sourceMap",
                         options: {
-                            config: 'postcss.conf.js'
+                            config: {
+                                path: 'postcss.config.js' 
+                              }
                         }
                     },
-                    'scss-loader?sourceMap'
+                    'sass-loader?sourceMap'
                 ]
             }
         ]

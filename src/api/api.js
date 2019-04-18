@@ -17,9 +17,9 @@ const apiRequest = (url,option) => {
 };
 
 export default {
-    fetchLogin(){
+    fetchTheme(){
         return apiRequest(
-            '/login',{
+            '/theme',{
                 headers,
                 method: method.get,
             }

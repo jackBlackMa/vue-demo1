@@ -1,12 +1,13 @@
 const http = require('http');
 const request = require('request');
 
-const hostname='192.168.173.1';
-const port = 10001;
-const imgPort = 8081;
+const hostname='localhost';
+const port = 10002;
+const imgPort = 8089;
 
 const apiServer = http.createServer((req,res) => {
     const url = 'http://news-at.zhihu.com/api/4'+ req.url;
+    console.log(url)
     const options = {
         url,
     }
@@ -47,5 +48,5 @@ const imgServer = http.createServer((req,res) =>{
 })
 
 imgServer.listen(imgPort,hostname,()=>{
-    console.log(`图片代理服务在${hostname}:${port}运行`)
+    console.log(`图片代理服务在${hostname}:${imgPort}运行`)
 })

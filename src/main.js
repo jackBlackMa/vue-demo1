@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import RouterConf from './router/router'
 import Vuex from 'vuex'
 import storeConf from './store/store'
+import './style/style.scss'
 // MyPlugin.install = (Vue,options){
 
 // }

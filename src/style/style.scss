@@ -1,0 +1,82 @@
+
+$bgColor: #657180;
+$menuColor: #f5f7f9;
+$listBg: #d7dde4;
+$menuItemColor: #e3e8ee;
+$on: #3399ff;
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: $bgColor;
+    font-size: 16px;
+}
+.daily{
+    .menu{
+        width: 150px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        overflow:auto;
+        background: $menuColor;
+        .item{
+            font-size: 18px;
+            text-align: center;
+            margin: 5px 0;
+            padding: 10px 0;
+            cursor: pointer;
+            border-right: 2px solid transparent;
+            transition: all .3s ease-in-out;
+            &:hover {
+                background: $menuItemColor;
+              }
+        }
+        .on{
+            border-right: 2px solid $on;
+        }
+        ul{
+            list-style: none;
+            li{
+                a{
+                    display: bloack;
+                    color: inherit;
+                    text-decoration: none;
+                    padding: 5px 0;
+                    margin: 5px 0;
+                    cursor: pointer;
+                    &:hover{
+                        color: $on;
+                    }
+                }
+            }
+                
+        }
+    }
+    .list{
+        width: 300px;
+        position: fixed;
+        left: 150px;
+        top: 0;
+        bottom: 0;
+        overflow: auto;
+        border-right: 1px solid $listBg;
+        .item{
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            padding: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                background: $menuItemColor;
+            }
+        }
+    }
+    .acticle{
+        margin-right: 450px;
+        padding: 20px;
+    }
+}
