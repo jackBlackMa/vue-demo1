@@ -7,7 +7,6 @@ const imgPort = 8089;
 
 const apiServer = http.createServer((req,res) => {
     const url = 'http://news-at.zhihu.com/api/4'+ req.url;
-    console.log(url)
     const options = {
         url,
     }
@@ -28,6 +27,7 @@ apiServer.listen(port,hostname,()=> {
 
 const imgServer = http.createServer((req,res) =>{
     const url = req.url.split('/img/')[1];
+    console.log(url)
     const options = {
         url,
         encoding:null,
@@ -35,7 +35,8 @@ const imgServer = http.createServer((req,res) =>{
 
     const callback = (err,response,body) => {
         if(!err&&response.statusCode===200){
-            const contentType = response.header['content-type'];
+            console.log(response.headers)
+            const contentType = response.headers['content-type'];
             res.setHeader('Content-Type',contentType);
             res.setHeader('Access-Control-Allow-Origin', '*');
             res.end(body)
